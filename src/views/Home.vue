@@ -6,7 +6,7 @@
 
 <script>
 // @ is an alias to /src
-import Post_compo from "@/components/Post_compo.vue"
+import Post_compo from '@/components/Post_compo.vue'
 export default {
   name: "Home",
   components: {

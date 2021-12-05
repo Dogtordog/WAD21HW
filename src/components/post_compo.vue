@@ -8,14 +8,17 @@
       <label>{{post.time}}</label>
     </div>
     <div class = "postituseSisu">
+      {{post.image}}
       <p>{{post.caption}}</p>
-      <img src="../assets/like.png" class = "like"/>
+      <img v-on:click="likeUp(post)" src="../assets/like.png" class = "like"/>
+      <a>{{ post.likeCount }}</a>
     </div>
   </div>
 </div>
 </div>
 </div>
 </template>
+
 
 <script>
    export default{
@@ -24,14 +27,12 @@
           return this.$store.getters.postsList;
         }
       },
-      data() {
-        return {
-          postImage:''
+      methods: {
+        likeUp: function(post){ 
+          this.$store.dispatch("increment", post)
         }
-      },
-      mounted() {
-        this.postImage=post.image
       }
+
    }
 </script>
 
