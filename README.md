@@ -1,7 +1,29 @@
-# WAD21HW
-UT Web App Development Fall 21 Homework. Siim Parring, Mark Erik Pani, Hannes Kuslap
+# project
 
-homework2: 
-Task3: The webpage where we uploded json checks its correctness itsself
+## Project setup
+```
+npm install
+```
 
-Task 6: Instead of puting an image on json. You can put uri for a image on json and use that to get image
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your unit tests
+```
+npm run test:unit
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
