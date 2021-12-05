@@ -10,7 +10,7 @@ export const store = new Vuex.Store({
           author: "Mark",
           time: "26.09.2020",
           caption: "what the hell, you won't believe this!!!",
-          image: "assets/imgs/pilt2.JPG"
+          image: "assets/imgs/pilt2.png"
         },
         {id: 2,
           author: "Bob",
@@ -34,7 +34,7 @@ export const store = new Vuex.Store({
           author: "Kate",
           time: "10.04.2021",
           caption: "is this JOKER?",
-          image: "assets/imgs/pilt2.JPG"
+          image: "assets/imgs/pilt2.png"
         },
         {id: 6,
           author: "Batman",
@@ -46,13 +46,13 @@ export const store = new Vuex.Store({
           author: "Yep",
           time: "11.04.2021",
           caption: "this is my cat, she's lovely",
-          image: "assets/imgs/pilt1.JPG"
+          image: "assets/imgs/pilt1.png"
         },
         {id: 8,
           author: "xpwnmanfromHELL",
           time: "11.04.2021",
           caption: "i hecking love bat man",
-          image: "assets/imgs/pilt2.JPG"
+          image: "assets/imgs/pilt2.png"
         },
         {id: 9,
           author: "Joosep",
@@ -64,7 +64,7 @@ export const store = new Vuex.Store({
           author: "Ella",
           time: "12.04.2021",
           caption: "this is me without makeup",
-          image: "assets/imgs/dp.JPG"
+          image: "assets/imgs/dp.png"
         } 
     ]
   },

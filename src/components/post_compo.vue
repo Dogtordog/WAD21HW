@@ -1,16 +1,19 @@
 <template>
 <div>
+  <div class = "container">
+  <div class = "box">
   <div class = "singlebox" v-for="post in posts" :key="post.id">
     <div class="posttop">
       <label>{{post.author}}</label>
       <label>{{post.time}}</label>
     </div>
     <div class = "postituseSisu">
-      <img :src="assets/imgs"  class = "postitusePilt"/>
       <p>{{post.caption}}</p>
-      <img src="assets/imgs/like.JPG"  class = "like"/>
+      <img src="../assets/like.png" class = "like"/>
     </div>
   </div>
+</div>
+</div>
 </div>
 </template>
 
@@ -20,11 +23,36 @@
         posts() {
           return this.$store.getters.postsList;
         }
+      },
+      data() {
+        return {
+          postImage:''
+        }
+      },
+      mounted() {
+        this.postImage=post.image
       }
    }
 </script>
 
 <style scoped lang= "scss">
+  .container  {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+  }
+
+  .box {
+    display: flex;
+    height: 100%;
+    width: 500px;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    position: relative;
+    text-align: center;
+  }
   .singlebox {
     display: flex;
     flex-direction: column;
@@ -33,6 +61,11 @@
     position: relative;
   }
 
+  .like{
+    padding: 0 0 1% 1%;
+    height: 20px;
+    width: 20px;
+  }
 
   .singlebox + .singlebox{
     padding-top: 0px;
