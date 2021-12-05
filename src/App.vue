@@ -3,9 +3,6 @@
     <div id="nav">
       <my-header></my-header>
     </div>
-    <div>
-      <post-compo></post-compo>
-    </div>
     <router-view/>
     <my-footer></my-footer>
   </div>
@@ -14,12 +11,10 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
-import Post_compo from './components/Post_compo.vue'
   export default {
      components:{
          'my-header':Header,
          'my-footer':Footer,
-         'post-compo':Post_compo
      }
   }
 </script>
