@@ -3,15 +3,18 @@
     <div id="nav">
       <my-header></my-header>
     </div>
-    <router-view />
+    <router-view/>
+    <my-footer></my-footer>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
   export default {
      components:{
-         'my-header':Header
+         'my-header':Header,
+         'my-footer':Footer
      }
   }
 </script>
