@@ -5,7 +5,7 @@
       <router-link :to="{ name: 'contact' }"> Contact </router-link> |
       <router-link to="/about">About</router-link>
 
-      <div class="nav">
+      <!--<div class="nav">
         <img src="images/logo.png" id="navitem" class="imageicon" />
       </div>
       <div class="nav">
@@ -22,7 +22,7 @@
             <a href="#">john.doe@example.com</a>
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
   </nav>
 </template>

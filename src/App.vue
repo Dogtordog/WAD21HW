@@ -3,6 +3,7 @@
     <div id="nav">
       <my-header></my-header>
     </div>
+    
     <router-view/>
     <my-footer></my-footer>
   </div>
@@ -14,7 +15,7 @@ import Footer from './components/Footer.vue'
   export default {
      components:{
          'my-header':Header,
-         'my-footer':Footer
+         'my-footer':Footer,
      }
   }
 </script>
