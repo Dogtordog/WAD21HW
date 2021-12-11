@@ -15,35 +15,41 @@
 				<div class="singlebox">
 					<% if (posts.length > 0) { %>
 					<% posts.forEach(post => { %>
-					<a class="singlepost" href="/singlepost/<%= post.id %>">
-						<div class="posttop">
-							<%= post.title %>
-						</div>
-						<div class="postituseSisu">
-							<%= post.body %>
-							<div class="postbottom">
-								<p class="likeCount"><%= post.likeCount %></p>
-								<p class="author">Poster: <%= post.author %></p>
-							</div>
-						</div>
-						<% }) %>
-					</a>
-                    <a class="put" data-put="<%= posts.likeCount %>">Like</a>
+                        <div class ="postpart">
+                            <a class="singlepost" href="/singlepost/<%= post.id %>">
+                                <div class="posttop">
+                                    <%= post.title %>
+                                </div>
+                                <div class="postituseSisu">
+                                    <%= post.body %>
+                                    <div class="postbottom">
+                                        <p class="likeCount"><%= post.likeCount %></p>
+                                        <p class="author">Poster: <%= post.author %></p>
+                                    </div>
+                                </div>
+                                
+                            </a>
+                        </div>
+                        
+                        <a class="put" data-put="<%= posts.likeCount %>">Like</a>
+                        <script>
+                            const putreq = document.querySelector('a.put');
+                            putreq.addEventListener('click', (e) => {
+                            const endpoint = `/posts/${putreq.dataset.put}`;
+                            fetch(endpoint, {
+                                method: 'PUT',
+                            }).then(window.location.href = '/posts')
+                            });
+                        </script>
+                    <% }) %>
 					<% } else { %>
 					<p>You did not post anything...</p>
 					<% } %>
 				</div>
+                
 			</div>
 		</div>
-        <script>
-			const putreq = document.querySelector('a.put');
-			   putreq.addEventListener('click', (e) => {
-			const endpoint = `/posts/${putreq.dataset.put}`;
-			   fetch(endpoint, {
-			       method: 'PUT',
-			   }).then(window.location.href = '/posts')
-			});
-		</script>
+
 		<%- include('../partials/footer.ejs') %>
 	</body>
 </html>
