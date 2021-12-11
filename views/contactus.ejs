@@ -6,14 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> <%= title %> </h1>
-    <a href="/">Home </a> |
-    <a href="/posts">Posts page</a> |
-    <a href="/contactus">Contact us</a>
-    </nav>
-   <footer class="footer">
-    <p>© WAD 2021 </p>
-   </footer>
+    <%- include('../partials/navbar.ejs') %>
+    <%- include('../partials/footer.ejs') %>
    
 </body>
 </html>
