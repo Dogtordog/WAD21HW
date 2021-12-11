@@ -8,6 +8,7 @@
     position: relative;
     text-align: center;
   }
+
   .singlepost {
     text-decoration: none;
     color:black;
@@ -35,6 +36,7 @@
     justify-content: center;
     background-color: rgb(232, 232, 240);
   }
+
   .postituseSisu{
     padding: 10px;
     margin-bottom: 7px;
@@ -54,10 +56,10 @@
 
   .author{
     display: flex;
-
     font-size: 13px;
     justify-content: right;
   }
+  
   .like{
     display: flex;
     padding: 0 0 1% 1%;

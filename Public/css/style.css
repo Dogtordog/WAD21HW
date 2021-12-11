@@ -7,12 +7,14 @@
   }
 
   nav{
+    
     display: flex;
     justify-content: center;
     background-color: rgb(180, 180, 180);
   }
 
   nav a {
+    text-decoration: none;
     margin-left: 4px;
     margin-right: 4px;
     font-size: 20px;
@@ -23,6 +25,12 @@
     justify-content: center;
     align-items: center;
     font-size: 30px;
+  }
+
+  label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
   }
 
 
