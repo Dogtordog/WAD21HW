@@ -1,46 +1,5 @@
 <html lang="en">
-<<<<<<< HEAD
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="/css/style.css" rel="stylesheet" type="text/css">
-      <title>Posts</title>
-   </head>
-   <body>
-      <%- include('../partials/navbar.ejs') %>
-      <div class ="container">
-      <div class="box">
-         <div class="singlebox">
-             <div class="postpart">
-            <% if (posts.length > 0) { %>
-            <% posts.forEach(post => { %>
-            <a class="postpart" href="/singlepost/<%= post.id %>">
-            <h3 class="author">
-                <%= post.author %>
-            </h3>
-            <h2 class="title">
-                <%= post.title %>
-            </h2>
-            <p class="body">
-                <%= post.body %>
-            </p>
-        </div>
-            <button class="btn-primary-full" >
-                like
-                <i class="likebtn" aria-hidden="true"></i>
-            </button>
 
-         <% }) %>
-         <% } else { %>
-         <p>You did not post anything...</p>
-         <% } %>
-        </div>
-      </div>
-    </div>
-      <%- include('../partials/footer.ejs') %>
-   </body>
-=======
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,6 +28,10 @@
 						</div>
 						<% }) %>
 					</a>
+                    <button class="btn-primary-full" >
+                        like
+                        <i class="likebtn" aria-hidden="true"></i>
+                    </button>
 					<% } else { %>
 					<p>You did not post anything...</p>
 					<% } %>
@@ -77,5 +40,4 @@
 		</div>
 		<%- include('../partials/footer.ejs') %>
 	</body>
->>>>>>> 2415803e0dcf06fe2748bc01d1ed2eb8fc25be45
 </html>
