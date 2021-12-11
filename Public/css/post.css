@@ -1,0 +1,60 @@
+
+  .box {
+    display: flex;
+    height: 100%;
+    width: 500px;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: relative;
+    text-align: center;
+  }
+  .singlepost {
+    text-decoration: none;
+    color:black;
+  }
+
+  .singlebox {
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(246, 246, 250);
+    padding: 20px;
+    position: relative;
+  }
+  
+ 
+  .singlebox + .singlebox{
+    padding-top: 0px;
+  }
+
+  .posttop{
+    margin-top: 7px;
+    box-shadow: 2px 2px 2px 2px rgb(191, 191, 197);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display:flex;
+    justify-content: center;
+    background-color: rgb(232, 232, 240);
+  }
+  .postituseSisu{
+    padding: 10px;
+    margin-bottom: 7px;
+    box-shadow: 2px 2px 2px 2px rgb(191, 191, 197);
+    display:flex;
+    background-color: rgb(232, 232, 240);
+    flex-direction: column;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    word-wrap: break-word;
+  }
+
+  .author{
+    display: flex;
+    padding: 0px 5px 0px 0px;
+    font-size: 13px;
+    justify-content: right;
+  }
+  .like{
+    padding: 0 0 1% 1%;
+    height: 20px;
+    width: 20px;
+  }

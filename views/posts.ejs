@@ -4,6 +4,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="/css/style.css" rel="stylesheet" type="text/css">
+      <link href="/css/post.css" rel="stylesheet" type="text/css">
       <title>Posts</title>
    </head>
    <body>
@@ -14,16 +15,16 @@
          <% if (posts.length > 0) { %>
          <% posts.forEach(post => { %>
          <a class="singlepost" href="/singlepost/<%= post.id %>">
-         <h3 class="author">
-            <%= post.author %>
-         </h3>
-         <h2 class="title">
+            
+         <div class="posttop">
             <%= post.title %>
-         </h2>
-         <p class="body">
+        </div>
+         <div class="postituseSisu">
             <%= post.body %>
-         </p>
-         <% }) %>
+            <p class="author">Poster: <%= post.author %></p>
+         </div>
+
+         <% }) %></a>
          <% } else { %>
          <p>You did not post anything...</p>
          <% } %>
