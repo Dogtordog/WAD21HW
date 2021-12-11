@@ -89,11 +89,12 @@ app.put('/posts', async(req, res) => {
 		} = req.params;
 		const post = req.body;
 		console.log(req.params.id);
+		let uuslike = post.likes+1
 		
 		console.log("like update request has arrived");
 	
 	const updatepost = await pool.query(
-	"UPDATE nodetable SET likecount = $2 WHERE id =$1", [id, post.likes +1]
+	"UPDATE nodetable SET likecount = $2 WHERE id =$1", [id, uuslike]
 	);
 	res.json(post);
 	} catch (err) {
