@@ -17,11 +17,11 @@ app.listen(3000, () => {
 app.get('/', (req, res) => {
 	res.render('index');
 });
-/* app.get('/', (req, res) => {
+ app.get('/', (req, res) => {
     let title = "Home"
-    /* res.sendFile('./views/index.html', { root: __dirname }); */
-/*     res.render('index', {title : title});
-   }); */
+     res.sendFile('./views/index.html', { root: __dirname }); 
+     res.render('index', {title : title});
+   }); 
 app.get('/posts', async (req, res) => {
 	try {
 		console.log("get posts request has arrived");
@@ -95,6 +95,10 @@ app.post('/posts', async (req, res) => {
 });
 app.get('/create', (req, res) => {
 	res.render('create');
+});
+
+app.get('/contactus', (req, res) => {
+	res.render('contactus');
 });
 app.use((req, res) => {
 	res.status(404).render('404');
