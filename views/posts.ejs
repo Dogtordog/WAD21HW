@@ -21,7 +21,11 @@
         </div>
          <div class="postituseSisu">
             <%= post.body %>
+            <div class="postbottom">
+            
+            <p class="likeCount"><%= post.likeCount %></p>
             <p class="author">Poster: <%= post.author %></p>
+        </div>
          </div>
 
          <% }) %></a>
