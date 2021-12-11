@@ -128,8 +128,8 @@ app.post('/posts', async (req, res) => {
 		console.error(err.message)
 	}
 });
-app.get('/create', (req, res) => {
-	res.render('create');
+app.get('/addnewpost', (req, res) => {
+	res.render('addnewpost');
 });
 
 app.get('/contactus', (req, res) => {
