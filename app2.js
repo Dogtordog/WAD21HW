@@ -84,14 +84,16 @@ app.get('/singlepost/:id', async (req, res) => {
 app.put('/posts', async(req, res) => {
 	try {
 		console.log("put request has arrived");
-		const id = req.params.id;
+		const {
+			id
+		} = req.params;
 		const post = req.body;
 		console.log(req.params.id);
 		
 		console.log("like update request has arrived");
 	
 	const updatepost = await pool.query(
-	"UPDATE nodetable SET (likeCount) = ($4) WHERE id =$1", [id, post.author, post.title, post.body, post.likeCount +1]
+	"UPDATE nodetable SET likecount = $2 WHERE id =$1", [id, post.likes +1]
 	);
 	res.json(post);
 	} catch (err) {

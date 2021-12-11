@@ -23,7 +23,7 @@
                                 <div class="postituseSisu">
                                     <%= post.body %>
                                     <div class="postbottom">
-                                        <p class="likeCount"><%= post.likeCount %></p>
+                                        <p class="likecount"><%= post.likecount %></p>
                                         <p class="author">Poster: <%= post.author %></p>
                                     </div>
                                 </div>
@@ -31,7 +31,7 @@
                             </a>
                         </div>
                         
-                        <a class="put" data-put="<%= posts.likeCount %>">Like</a>
+                        <a class="put" data-put="<%= posts.id %>">Like</a>
                         <script>
                             const putreq = document.querySelector('a.put');
                             putreq.addEventListener('click', (e) => {
