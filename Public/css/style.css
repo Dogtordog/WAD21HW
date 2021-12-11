@@ -4,10 +4,6 @@
     width: 300px;
   }
 
-  #navitem{
-    margin: 5px;
-  }
-
   .imageicon {
     height: 25px;
     border-radius: 10%;
@@ -27,15 +23,15 @@
       background-color: rgb(2, 2, 73);
   }
 
-  .nav {
-    display:flex;
-    justify-content: space-between;
-    background-color: rgb(246, 246, 250);
+  nav{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(180, 180, 180);
   }
-
-  .nav div {
-    justify-content: space-between;
-    flex-direction: row;
+  nav a {
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: 20px;
   }
 
   .container  {
@@ -51,7 +47,7 @@
     height: 100%;
     width: 500px;
     flex-direction: column;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     position: relative;
     text-align: center;
   }
@@ -86,9 +82,7 @@
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
   }
-  .postitusePilt{
-    
-  }
+
 
   .posttop > label{
     color: rgb(87, 87, 87);
