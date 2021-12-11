@@ -1,4 +1,5 @@
 <html lang="en">
+<<<<<<< HEAD
    <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,4 +40,42 @@
     </div>
       <%- include('../partials/footer.ejs') %>
    </body>
+=======
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/css/style.css" rel="stylesheet" type="text/css">
+		<link href="/css/post.css" rel="stylesheet" type="text/css">
+		<title>Posts</title>
+	</head>
+	<body>
+		<%- include('../partials/navbar.ejs') %>
+		<div class ="container">
+			<div class="box">
+				<div class="singlebox">
+					<% if (posts.length > 0) { %>
+					<% posts.forEach(post => { %>
+					<a class="singlepost" href="/singlepost/<%= post.id %>">
+						<div class="posttop">
+							<%= post.title %>
+						</div>
+						<div class="postituseSisu">
+							<%= post.body %>
+							<div class="postbottom">
+								<p class="likeCount"><%= post.likeCount %></p>
+								<p class="author">Poster: <%= post.author %></p>
+							</div>
+						</div>
+						<% }) %>
+					</a>
+					<% } else { %>
+					<p>You did not post anything...</p>
+					<% } %>
+				</div>
+			</div>
+		</div>
+		<%- include('../partials/footer.ejs') %>
+	</body>
+>>>>>>> 2415803e0dcf06fe2748bc01d1ed2eb8fc25be45
 </html>
