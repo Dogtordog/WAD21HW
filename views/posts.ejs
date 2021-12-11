@@ -11,18 +11,25 @@
       <div class ="container">
       <div class="box">
          <div class="singlebox">
-         <% if (posts.length > 0) { %>
-         <% posts.forEach(post => { %>
-         <a class="singlepost" href="/singlepost/<%= post.id %>">
-         <h3 class="author">
-            <%= post.author %>
-         </h3>
-         <h2 class="title">
-            <%= post.title %>
-         </h2>
-         <p class="body">
-            <%= post.body %>
-         </p>
+             <div class="postpart">
+            <% if (posts.length > 0) { %>
+            <% posts.forEach(post => { %>
+            <a class="postpart" href="/singlepost/<%= post.id %>">
+            <h3 class="author">
+                <%= post.author %>
+            </h3>
+            <h2 class="title">
+                <%= post.title %>
+            </h2>
+            <p class="body">
+                <%= post.body %>
+            </p>
+        </div>
+            <button class="btn-primary-full" >
+                like
+                <i class="likebtn" aria-hidden="true"></i>
+            </button>
+
          <% }) %>
          <% } else { %>
          <p>You did not post anything...</p>

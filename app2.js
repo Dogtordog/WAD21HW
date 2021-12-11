@@ -65,6 +65,39 @@ app.get('/posts/:id', async (req, res) => {
 		console.error(err.message);
 	}
 });
+app.get('/singlepost/:id', async (req, res) => {
+	try {
+		const id = req.params.id;
+		console.log(req.params.id);
+		console.log("get a single post request has arrived");
+		const posts = await pool.query(
+			"SELECT * FROM nodetable WHERE id = $1", [id]
+		);
+		res.render('singlepost', {
+			posts: posts.rows[0]
+		});
+	} catch (err) {
+		console.error(err.message);
+	}
+});
+
+app.put('/singlepost/:id', async(req, res) => {
+	try {
+		console.log("put request has arrived");
+		const id = req.params.id;
+		const post = req.body;
+		console.log(req.params.id);
+		
+		console.log("like update request has arrived");
+	
+	const updatepost = await pool.query(
+	"UPDATE nodetable SET (author, title, body, urllink) = ($2, $3, $4, $5) WHERE id =$1", [id, post.author, post.title, post.body, post.likeCount +1]
+	);
+	res.json(post);
+	} catch (err) {
+	console.error(err.message);
+	}
+   });
 app.delete('/posts/:id', async (req, res) => {
 	try {
 		console.log(req.params);
@@ -81,6 +114,8 @@ app.delete('/posts/:id', async (req, res) => {
 		console.error(err.message);
 	}
 });
+
+
 app.post('/posts', async (req, res) => {
 	try {
 		const post = req.body;
