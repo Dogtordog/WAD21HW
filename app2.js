@@ -81,7 +81,7 @@ app.get('/singlepost/:id', async (req, res) => {
 	}
 });
 
-app.put('/singlepost/:id', async(req, res) => {
+app.put('/posts', async(req, res) => {
 	try {
 		console.log("put request has arrived");
 		const id = req.params.id;
@@ -91,7 +91,7 @@ app.put('/singlepost/:id', async(req, res) => {
 		console.log("like update request has arrived");
 	
 	const updatepost = await pool.query(
-	"UPDATE nodetable SET (author, title, body, urllink) = ($2, $3, $4, $5) WHERE id =$1", [id, post.author, post.title, post.body, post.likeCount +1]
+	"UPDATE nodetable SET (likeCount) = ($4) WHERE id =$1", [id, post.author, post.title, post.body, post.likeCount +1]
 	);
 	res.json(post);
 	} catch (err) {

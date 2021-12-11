@@ -28,16 +28,22 @@
 						</div>
 						<% }) %>
 					</a>
-                    <button class="btn-primary-full" >
-                        like
-                        <i class="likebtn" aria-hidden="true"></i>
-                    </button>
+                    <a class="put" data-put="<%= posts.likeCount %>">Like</a>
 					<% } else { %>
 					<p>You did not post anything...</p>
 					<% } %>
 				</div>
 			</div>
 		</div>
+        <script>
+			const putreq = document.querySelector('a.put');
+			   putreq.addEventListener('click', (e) => {
+			const endpoint = `/posts/${putreq.dataset.put}`;
+			   fetch(endpoint, {
+			       method: 'PUT',
+			   }).then(window.location.href = '/posts')
+			});
+		</script>
 		<%- include('../partials/footer.ejs') %>
 	</body>
 </html>
