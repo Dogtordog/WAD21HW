@@ -15,10 +15,10 @@
  <% posts.forEach(post => { %>
  <a class="singlepost" href="/singlepost/<%= post.id %>">
  <h3 class="title">
- <%= post.title %>
+ <%= post.author %>
  </h3>
  <p class="body">
- <%= post.body %>
+ <%= post.caption %>
  </p>
  </a>
  <% }) %>
