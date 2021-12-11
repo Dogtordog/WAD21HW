@@ -8,7 +8,7 @@
 </head>
 <body>
  <h1>Single post page</h1>
- <%- include('./partials/navbar.ejs') %>
+ <%- include('../partials/navbar.ejs') %>
  <div class="singlepost">
  <h2>
  <%= posts.title %>
@@ -29,6 +29,6 @@
  }).then(window.location.href = '/posts')
  });
  </script>
- <%- include('./partials/footer.ejs') %>
+ <%- include('../partials/footer.ejs') %>
 </body>
 </html>
